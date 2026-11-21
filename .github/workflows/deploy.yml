@@ -1,3 +1,4 @@
+
 name: deploy
 
 on:
@@ -22,12 +23,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: yarn
+          cache: npm
 
       - name: Install and build
         run: |
-          yarn install --frozen-lockfile
-          yarn build:skip-checks
+          npm install
+          npm run build:skip-checks
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

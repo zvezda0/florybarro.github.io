@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "yarn check:images && astro build",
+    "build": "npm run check:images && astro build",
     "build:skip-checks": "astro build",
     "build:dev": "astro build --devOutput",
     "serve": "npx serve dist/",
